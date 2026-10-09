@@ -1,7 +1,43 @@
 # 🏍️ Free Your Garage (FYG) — Swap American Bike Parts
 
+[![Live Demo](https://img.shields.io/badge/Demo%20Live-GitHub%20Pages-success?style=for-the-badge&logo=github)](https://nicolavaligi.github.io/free-your-garage/)
+[![Feasibility Study](https://img.shields.io/badge/Studio%20Fattibilità-8.0%2F10%20(GO)-orange?style=for-the-badge)](FEASIBILITY_STUDY.md)
+[![License](https://img.shields.io/badge/Proprietà-Nicola%20Valigi-darkgreen?style=for-the-badge)](#)
+
 > **Piattaforma P2P verticale dedicata a ricambi e accessori originali Harley-Davidson.**  
-> Progetto e prototipo esecutivo sviluppato da **Nicola Valigi (Houdinick)** sulla base dell'analisi strategica del documento di Federico Ponso (*APP - Free Your Garage*, Ottobre 2026).
+> Progetto e prototipo esecutivo ideato e sviluppato da **Nicola Valigi (Houdinick)** sulla base dell'analisi strategica del documento di Federico Ponso (*APP - Free Your Garage*, Ottobre 2026).
+
+---
+
+## 🔗 Risorse Ufficiali di Progetto
+
+* 🌐 **[Demo Live Interattiva (Web & Smartphone)](https://nicolavaligi.github.io/free-your-garage/)** — Prova l'esperienza a 3 tocchi, il Garage Virtuale e il wizard di pubblicazione.
+* 📊 **[Studio di Fattibilità Esecutivo (Versione Web)](https://nicolavaligi.github.io/free-your-garage/feasibility.html)** — Formato grafico sfogliabile con tabelle e KPI.
+* 📄 **[Documento Studio di Fattibilità Markdown](FEASIBILITY_STUDY.md)** — Relazione integrale con Unit Economics, TAM/SAM/SOM, analisi legale IP e piano Cold-Start.
+
+---
+
+## 📊 Sintesi dello Studio di Fattibilità (Scorecard: 8.0 / 10 — GO)
+
+Il progetto è stato sottoposto a una rigorosa valutazione strategica, economica, tecnica e legale.
+
+| Dimensione di Analisi | Punteggio | Verdetto Sintetico | Livello di Rischio |
+| :--- | :---: | :--- | :---: |
+| **1. Attrattività di Mercato & Domanda** | **8.5 / 10** | Nicchia ad altissima propensione di spesa e cannibalizzazione dell'usato | 🟡 Medio |
+| **2. Fattibilità Tecnologica & Architettura** | **9.0 / 10** | Stack maturo (React Native + Supabase), costi fissi quasi a zero | 🟢 Basso |
+| **3. Conformità Legale & Marchio (IP)** | **7.5 / 10** | Fattibile con rigida applicazione del *Nominative Fair Use* e DSA | 🟠 Medio-Alto |
+| **4. Unit Economics & Monetizzazione** | **8.5 / 10** | Scontrino medio 120€, margine netto contribuzione ~7,55 € per ordine | 🟢 Basso |
+| **5. Operatività & Logistica** | **7.0 / 10** | Eterogeneità pesi/volumi gestibile con convenzioni corriere a 3 taglie | 🟡 Medio |
+| **6. Superamento "Cold Start" (Liquidità)** | **7.5 / 10** | Risolvibile con strategia fondatori off-line (20-30 officine del Nord Italia) | 🟡 Medio |
+| **INDICE COMPLESSIVO DI FATTIBILITÀ** | **8.0 / 10** | **PROGETTO FATTIBILE & AD ELEVATO POTENZIALE (GO CON VINCOLI)** | 🟡 Moderato |
+
+### 💡 Unit Economics & Punto di Pareggio (Break-Even)
+* **Scontrino Medio Stimato (AOV)**: **120,00 €** (vs 20€ di Vinted).
+* **Fee Acquirente Piattaforma (6% + 0,80 €)**: **8,00 €**
+* **Margine su Spedizione Convenzionata**: **1,60 €**
+* **Margine Lordo per Ordine**: **9,60 €** (8,0% del transato).
+* **Margine Netto (al netto di Stripe Connect)**: **~ 7,55 € / vendita**.
+* **Punto di Pareggio Operativo**: Con costi server e tool stimati in circa **350 €/mese**, bastano **46 vendite al mese** in tutta Italia (**~1,5 transazioni al giorno**) per essere a break-even.
 
 ---
 
@@ -10,7 +46,7 @@
 I marketplace generalisti (Facebook Marketplace, Subito, Wallapop, eBay) offrono annunci disordinati, privi di filtri tecnici per famiglia/anno di moto, invasi da truffe e ricambi contraffatti.  
 **Free Your Garage** risolve questo problema strutturalmente:
 
-1. **Massimo 3 Tocchi**: chi cerca imposta la propria moto una sola volta nel **Garage Virtuale** e vede unicamente ricambi compatibili.
+1. **Massimo 3 Tocchi**: chi cerca imposta la propria moto una sola volta nel **Garage Virtuale** e vede unicamente ricambi compatibili al 100%.
 2. **Doppio Asse di Catalogo Rigoroso**:
    - **Famiglia & Generazione**: Softail (Pre-2017 e 2018+ con nuovo telaio), Dyna (1991–2017), Touring (Pre-2008, 2009–2016, 2017+ M8), Sportster (Ironhead, Evolution 1986–2022, Revolution Max 2021+), V-Rod, Trike, CVO.
    - **10 Categorie Tecniche**: Motore, Scarichi, Carrozzeria, Selle, Ciclistica, Impianto elettrico, Manubri, Borse, Accessori, Abbigliamento.
@@ -20,9 +56,9 @@ I marketplace generalisti (Facebook Marketplace, Subito, Wallapop, eBay) offrono
    - **Scarto Automatico AI**: Verifica nitidezza, sfondi e rilevamento del pezzo meccanico.
    - **Descrizione Assistita AI**: Generazione automatica di titoli standardizzati (`[Componente] – [Famiglia Anno] – cod. [OEM]`) e scheda tecnica.
 4. **Tutela Legale & Compliance di Marchio**:
-   - Nessun uso illegittimo di loghi o denominazioni ingannevoli.
-   - Marchi utilizzati esclusivamente come indicazione tecnica di compatibilità (Codice della Proprietà Industriale & EUIPO).
-   - Disclaimer legale e punto di contatto DSA contro le contraffazioni.
+   - Nessun uso illegittimo di loghi o denominazioni ingannevoli (rispetto rigoroso dell'Art. 5 e Art. 21 CPI).
+   - Marchi utilizzati esclusivamente come indicazione tecnica di compatibilità.
+   - Disclaimer legale in ogni schermata e punto di contatto DSA contro le contraffazioni.
 
 ---
 
@@ -68,7 +104,7 @@ uv run python server.py
 ```
 
 Oppure aprendo direttamente il file nel browser:
-`file:///Users/houdinick/free-your-garage/index.html`
+[`index.html`](index.html)
 
 - **Porta locale di default:** `http://localhost:8505`
 - **Tavolozza colori:** Fondo crema vintage (`#F5EFE6`), accenti arancio ruggine (`#D35400`), verde salvia d'officina (`#2D4739`), denim scuro (`#2C3E50`).
@@ -79,7 +115,7 @@ Oppure aprendo direttamente il file nel browser:
 
 | Periodo | Obiettivo di Fase | Criterio di Successo |
 | :--- | :--- | :--- |
-| **Mesi 1–2** | Validazione e landing page di prova | 300–500 pre-iscrizioni e 20 venditori disponibili |
+| **Mesi 1–2** | Validazione con 15 officine e landing page di prova | 300–500 pre-iscrizioni e 20 venditori disponibili |
 | **Mesi 2–3** | Ricerca di anteriorità marchio EUIPO/UIBM | Nome registrato e canali social blindati |
 | **Mesi 3–4** | Prova prototipo interattivo con 10 appassionati | Flusso a 3 tocchi convalidato |
 | **Mesi 4–7** | Sviluppo MVP (React Native / Expo / Supabase) | App stabile in beta chiusa |
