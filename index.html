@@ -1,38 +1,194 @@
 <!DOCTYPE html>
-<html lang="it">
+<html lang="it" prefix="og: https://ogp.me/ns#">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Free Your Garage — Swap American Bike Parts (Prototipo Ufficiale)</title>
-  <link rel="stylesheet" href="styles.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+  
+  <!-- Primary Meta Tags -->
+  <title>Free Your Garage — Swap American Bike Parts | Ricambi Originali Harley-Davidson</title>
+  <meta name="title" content="Free Your Garage — Swap American Bike Parts | Ricambi Originali Harley-Davidson">
+  <meta name="description" content="Free Your Garage (#FYG) è il primo marketplace P2P dedicato esclusivamente a ricambi e accessori originali Harley-Davidson. Trova pezzi compatibili in 3 tocchi per Softail, Dyna, Touring, Sportster e Old School con codici OEM verificati.">
+  <meta name="keywords" content="ricambi harley davidson, ricambi moto americane, accessori harley davidson usati, ricambi softail, ricambi dyna, ricambi touring m8, sportster evo, codici oem harley, swap american bike parts, free your garage, mercatino moto vinted">
+  <meta name="author" content="Nicola Valigi (Houdinick)">
+  <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+  <link rel="canonical" href="https://nicolavaligi.github.io/free-your-garage/">
+
+  <!-- Mobile & Progressive Web App Tags -->
+  <meta name="theme-color" content="#1b1c1d">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="apple-mobile-web-app-title" content="FreeYourGarage">
+
+  <!-- Open Graph / Facebook / WhatsApp / LinkedIn / Telegram -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://nicolavaligi.github.io/free-your-garage/">
+  <meta property="og:title" content="Free Your Garage — Swap American Bike Parts">
+  <meta property="og:description" content="Non la gratuità, ma l'ordine. Trova in 3 tocchi ricambi originali e accessori compatibili al 100% per la tua moto Harley-Davidson. Ispezione a 4 foto e codici OEM.">
+  <meta property="og:image" content="https://nicolavaligi.github.io/free-your-garage/og-image.png">
+  <meta property="og:image:secure_url" content="https://nicolavaligi.github.io/free-your-garage/og-image.png">
+  <meta property="og:image:type" content="image/png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Free Your Garage — Swap American Bike Parts Anteprima">
+  <meta property="og:locale" content="it_IT">
+  <meta property="og:site_name" content="Free Your Garage">
+
+  <!-- Twitter / X Cards -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:url" content="https://nicolavaligi.github.io/free-your-garage/">
+  <meta name="twitter:title" content="Free Your Garage — Swap American Bike Parts">
+  <meta name="twitter:description" content="Marketplace verticale ricambi e accessori originali Harley-Davidson. Ricerca in 3 tocchi per famiglia e codice OEM.">
+  <meta name="twitter:image" content="https://nicolavaligi.github.io/free-your-garage/og-image.png">
+  <meta name="twitter:creator" content="@nicolavaligi">
+
+  <!-- Favicons -->
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon.png">
+  <link rel="apple-touch-icon" href="favicon.png">
+
+  <!-- Google Fonts Preconnect -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="styles.css">
+
+  <!-- Schema.org JSON-LD Structured Data for Google Rich Snippets -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "WebSite",
+        "@id": "https://nicolavaligi.github.io/free-your-garage/#website",
+        "url": "https://nicolavaligi.github.io/free-your-garage/",
+        "name": "Free Your Garage",
+        "description": "Piattaforma e marketplace per la compravendita di ricambi e accessori originali Harley-Davidson.",
+        "inLanguage": "it-IT",
+        "publisher": {
+          "@type": "Person",
+          "name": "Nicola Valigi",
+          "url": "https://github.com/nicolavaligi"
+        },
+        "potentialAction": {
+          "@type": "SearchAction",
+          "target": "https://nicolavaligi.github.io/free-your-garage/?q={search_term_string}",
+          "query-input": "required name=search_term_string"
+        }
+      },
+      {
+        "@type": "WebApplication",
+        "@id": "https://nicolavaligi.github.io/free-your-garage/#app",
+        "name": "Free Your Garage - Swap American Bike Parts",
+        "operatingSystem": "All (Web, iOS, Android)",
+        "applicationCategory": "ShoppingApplication",
+        "offers": {
+          "@type": "Offer",
+          "price": "0",
+          "priceCurrency": "EUR"
+        },
+        "description": "Web App e prototipo navigabile per la compravendita di pezzi di ricambio Harley-Davidson con filtro per garage e compatibilità 100%."
+      },
+      {
+        "@type": "ItemList",
+        "name": "Ultimi Ricambi Originali Compatibili",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "item": {
+              "@type": "Product",
+              "name": "Coperchio Frizione Derby Cover – Softail 2018+ – cod. 25700941",
+              "description": "Coperchio frizione originale Derby Cover finitura Gloss Black con codice OEM 25700941 per motori Milwaukee-Eight.",
+              "image": "https://images.unsplash.com/photo-1558981403-c5f9899a28bc?auto=format&fit=crop&w=800&q=80",
+              "mpn": "25700941",
+              "brand": {
+                "@type": "Brand",
+                "name": "Harley-Davidson"
+              },
+              "offers": {
+                "@type": "Offer",
+                "price": "95.00",
+                "priceCurrency": "EUR",
+                "availability": "https://schema.org/InStock",
+                "itemCondition": "https://schema.org/LikeNewCondition"
+              }
+            }
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "item": {
+              "@type": "Product",
+              "name": "Sella Biposto Badlander Originale – Sportster 2004-2020 – cod. 51747-07",
+              "description": "Sella originale profilo basso Badlander per moto Harley-Davidson Sportster 883 e 1200.",
+              "image": "https://images.unsplash.com/photo-1558980394-0a06c4631733?auto=format&fit=crop&w=800&q=80",
+              "mpn": "51747-07",
+              "brand": {
+                "@type": "Brand",
+                "name": "Harley-Davidson"
+              },
+              "offers": {
+                "@type": "Offer",
+                "price": "180.00",
+                "priceCurrency": "EUR",
+                "availability": "https://schema.org/InStock",
+                "itemCondition": "https://schema.org/UsedCondition"
+              }
+            }
+          },
+          {
+            "@type": "ListItem",
+            "position": 3,
+            "item": {
+              "@type": "Product",
+              "name": "Carburatore Linkert M74B Originale – Panhead 1948–1965 – cod. 27152-48",
+              "description": "Carburatore autentico d'epoca per motori Harley Panhead 74ci con timbro in rilievo.",
+              "image": "https://images.unsplash.com/photo-1568772585407-9361f9bf3a87?auto=format&fit=crop&w=800&q=80",
+              "mpn": "27152-48",
+              "brand": {
+                "@type": "Brand",
+                "name": "Harley-Davidson"
+              },
+              "offers": {
+                "@type": "Offer",
+                "price": "680.00",
+                "priceCurrency": "EUR",
+                "availability": "https://schema.org/InStock",
+                "itemCondition": "https://schema.org/UsedCondition"
+              }
+            }
+          }
+        ]
+      }
+    ]
+  }
+  </script>
 </head>
 <body>
 
-  <!-- Top Controller Bar for Prototype Review -->
-  <header class="top-controller-bar">
+  <!-- Top Controller Bar for Review & Viewport Switcher -->
+  <header class="top-controller-bar" role="banner">
     <div class="controller-left">
       <strong>FREE YOUR GARAGE (FYG)</strong>
-      <span class="badge-status-pill">PROTOTIPO FASE 6 INTERATTIVO</span>
+      <span class="badge-status-pill">PROTOTIPO UFFICIALE SEO OPTIMIZED</span>
       <span style="color:#888; font-size:12px;">Nicola Valigi · Proprietà Personale</span>
     </div>
-    <div class="view-mode-toggle">
-      <button id="btn-mode-mobile" class="mode-btn active">📱 Vista Smartphone (3 Tocchi)</button>
-      <button id="btn-mode-desktop" class="mode-btn">💻 Vista Desktop / Vetrina</button>
+    <div class="view-mode-toggle" role="group" aria-label="Cambia visualizzazione">
+      <button id="btn-mode-mobile" class="mode-btn active" title="Visualizza interfaccia smartphone a 3 tocchi">📱 Vista Smartphone (3 Tocchi)</button>
+      <button id="btn-mode-desktop" class="mode-btn" title="Visualizza interfaccia web estesa desktop">💻 Vista Desktop / Vetrina</button>
     </div>
   </header>
 
   <!-- Master Viewport wrapper -->
-  <main id="master-viewport" class="master-viewport mode-mobile">
+  <main id="master-viewport" class="master-viewport mode-mobile" role="main">
     <div class="app-container">
 
       <!-- Global App Header -->
-      <div class="app-header">
+      <header class="app-header">
         <div class="header-top">
-          <div class="brand-badge" onclick="navigateTo('home')">
-            <div class="brand-icon-emblem">⚡</div>
+          <div class="brand-badge" onclick="navigateTo('home')" role="button" tabindex="0" aria-label="Torna alla Home">
+            <div class="brand-icon-emblem" aria-hidden="true">⚡</div>
             <div class="brand-text">
               <h1>Free Your Garage</h1>
               <span>Swap American Bike Parts</span>
@@ -44,9 +200,9 @@
         </div>
 
         <!-- Active Bike Selector Banner (Feature Killer) -->
-        <div id="my-garage-header-pill" class="my-garage-active-pill" title="Clicca per cambiare moto attiva nel tuo garage">
+        <div id="my-garage-header-pill" class="my-garage-active-pill" title="Clicca per cambiare moto attiva nel tuo garage" role="button" tabindex="0">
           <div class="garage-pill-left">
-            <div class="bike-icon-circle">🏍️</div>
+            <div class="bike-icon-circle" aria-hidden="true">🏍️</div>
             <div>
               <div class="garage-pill-title">La mia moto attiva (Filtro 100%)</div>
               <div id="header-bike-name" class="garage-pill-name">Softail Street Bob 107 (2018+)</div>
@@ -54,74 +210,77 @@
           </div>
           <div class="garage-pill-action">Cambia ▾</div>
         </div>
-      </div>
+      </header>
 
       <!-- ================= SCREEN 1: HOME ================= -->
-      <section id="screen-home" class="screen-view active">
+      <section id="screen-home" class="screen-view active" aria-labelledby="home-hero-heading">
         <div class="home-content">
 
-          <!-- Value Proposition -->
-          <div class="value-prop-banner">
-            <h2>Non la gratuità, ma l'ordine</h2>
-            <p>Solo ricambi e accessori originali per moto americane. Trova in 3 tocchi solo i pezzi che montano esattamente sulla tua moto.</p>
+          <!-- Value Proposition Banner -->
+          <article class="value-prop-banner">
+            <h2 id="home-hero-heading">Non la gratuità, ma l'ordine</h2>
+            <p>Il marketplace verticale dedicato esclusivamente a ricambi e accessori originali per moto Harley-Davidson. Trova in soli 3 tocchi solo i pezzi che montano esattamente sulla tua moto.</p>
             <div class="pills-row">
               <span class="value-prop-pill">✅ Zero truffe</span>
               <span class="value-prop-pill">🔍 Codici OEM verificati</span>
               <span class="value-prop-pill">📸 Ispezione 4 foto</span>
             </div>
-          </div>
+          </article>
 
           <!-- Old School Special Section Callout -->
-          <div class="vintage-callout" onclick="filterByOldSchool()">
+          <article class="vintage-callout" onclick="filterByOldSchool()" role="button" tabindex="0">
             <div class="vintage-callout-text">
               <h3>🏛️ Sezione Speciale: Old School</h3>
-              <p>Oltre 40 anni: Flathead, Knucklehead, Panhead, Shovelhead</p>
+              <p>Pezzi d'epoca oltre 40 anni: Flathead, Knucklehead, Panhead, Shovelhead</p>
             </div>
             <div class="vintage-callout-badge">Esplora ➔</div>
-          </div>
+          </article>
 
           <!-- 10 Technical Categories Grid -->
-          <div>
+          <section aria-labelledby="cat-grid-heading">
             <div class="section-title">
-              <span>Categorie Tecniche</span>
-              <span style="font-size:11px; color:var(--text-muted); font-family:var(--font-body);">10 sezioni</span>
+              <h3 id="cat-grid-heading" style="font-size:inherit; margin:0;">Categorie Tecniche</h3>
+              <span style="font-size:11px; color:var(--text-muted); font-family:var(--font-body);">10 sezioni specializzate</span>
             </div>
             <div id="categories-grid" class="categories-grid">
               <!-- Dynamically populated via JS -->
             </div>
-          </div>
+          </section>
 
           <!-- Compatible Listings Feed for Current Bike -->
-          <div>
+          <section aria-labelledby="compat-feed-heading">
             <div class="section-title">
-              <span>Ricambi Compatibili Subito</span>
+              <h3 id="compat-feed-heading" style="font-size:inherit; margin:0;">Ricambi Compatibili Subito</h3>
               <span id="home-compat-count" class="badge-tag compatible">Filtro Attivo</span>
             </div>
             <div id="home-compatible-feed" class="listings-grid">
               <!-- Dynamically populated via JS -->
             </div>
-          </div>
+          </section>
 
         </div>
       </section>
 
       <!-- ================= SCREEN 2: RICERCA ================= -->
-      <section id="screen-search" class="screen-view">
+      <section id="screen-search" class="screen-view" aria-labelledby="search-screen-heading">
         <div class="search-content">
           
+          <h2 id="search-screen-heading" style="display:none;">Ricerca Ricambi e Codici OEM</h2>
+
           <!-- Unified Omnibox (Word or OEM code) -->
           <div class="search-input-wrapper">
-            <span class="search-icon-inside">🔍</span>
+            <span class="search-icon-inside" aria-hidden="true">🔍</span>
             <input 
               id="search-omnibox" 
               type="text" 
               class="search-main-input" 
               placeholder="Cerca pezzo o codice OEM (es. 25700941)..."
+              aria-label="Cerca ricambio per testo o codice ricambio OEM"
             >
           </div>
 
           <!-- Quick Filter Chips -->
-          <div class="filter-chips-row">
+          <div class="filter-chips-row" role="group" aria-label="Filtri rapidi">
             <button id="chip-filter-compat" class="chip-btn active">⚡ Solo per la mia moto</button>
             <button id="chip-filter-oem" class="chip-btn">🏷️ Solo OEM Marcati</button>
             <button class="chip-btn" onclick="resetSearchFilters()">🔄 Reimposta</button>
@@ -130,13 +289,13 @@
           <!-- Dropdowns Cascading Filters -->
           <div class="filter-controls-card">
             <div class="select-group">
-              <label>Famiglia e Anno</label>
+              <label for="search-select-family">Famiglia e Anno</label>
               <select id="search-select-family" class="custom-select">
                 <!-- Populated via JS -->
               </select>
             </div>
             <div class="select-group">
-              <label>Categoria Tecnica</label>
+              <label for="search-select-cat">Categoria Tecnica</label>
               <select id="search-select-cat" class="custom-select">
                 <!-- Populated via JS -->
               </select>
@@ -157,7 +316,7 @@
       </section>
 
       <!-- ================= SCREEN 3: DETTAGLIO ANNUNCIO ================= -->
-      <section id="screen-detail" class="screen-view">
+      <section id="screen-detail" class="screen-view" aria-labelledby="detail-title">
         <div class="detail-content">
 
           <!-- Top Back Bar -->
@@ -167,7 +326,7 @@
           </div>
 
           <!-- 4 Photo Inspection Gallery (Phase 5 Rule) -->
-          <div class="photo-inspection-grid">
+          <div class="photo-inspection-grid" role="region" aria-label="Galleria ispezione a 4 foto">
             <div id="slot-photo-main" class="inspection-slot main">
               <span class="slot-tag">1. Vista d'insieme</span>
             </div>
@@ -186,9 +345,9 @@
 
             <!-- Title & Price -->
             <div>
-              <div id="detail-title" style="font-size: 16px; font-weight: 800; line-height: 1.3; color: var(--oil-dark); margin-bottom: 6px;">
+              <h2 id="detail-title" style="font-size: 16px; font-weight: 800; line-height: 1.3; color: var(--oil-dark); margin-bottom: 6px;">
                 Coperchio Frizione Derby Cover – Softail 2018+ – cod. 25700941
-              </div>
+              </h2>
               <div id="detail-price" style="font-family: var(--font-heading); font-size: 26px; color: var(--rust-orange);">
                 95 €
               </div>
@@ -234,7 +393,7 @@
             <!-- Seller Card -->
             <div class="seller-profile-card">
               <div class="seller-avatar-block">
-                <div class="seller-avatar">MB</div>
+                <div class="seller-avatar" aria-hidden="true">MB</div>
                 <div>
                   <div id="detail-seller-name" style="font-size: 13.5px; font-weight: 700;">Marco B.</div>
                   <div id="detail-seller-badge" style="font-size: 11px; color: var(--forest-sage); font-weight: 600;">Fondatore #014</div>
@@ -254,7 +413,7 @@
 
             <div style="text-align: center; margin-top: 4px;">
               <button style="background: none; border: none; font-size: 11px; color: #999; text-decoration: underline; cursor: pointer;">
-                🚩 Segnala questo annuncio (Controllo Originalità)
+                🚩 Segnala questo annuncio (Controllo Originalità & Anti-Fake)
               </button>
             </div>
 
@@ -264,16 +423,16 @@
       </section>
 
       <!-- ================= SCREEN 4: PUBBLICA (WIZARD 5 PASSAGGI) ================= -->
-      <section id="screen-post" class="screen-view">
+      <section id="screen-post" class="screen-view" aria-labelledby="wizard-heading">
         <div class="post-wizard-content">
 
           <div class="section-title">
-            <span>Pubblica Ricambio</span>
-            <span style="font-size: 11px; color: var(--rust-orange); font-weight: 700;">Modello Vinted</span>
+            <h2 id="wizard-heading" style="font-size:inherit; margin:0;">Pubblica Ricambio</h2>
+            <span style="font-size: 11px; color: var(--rust-orange); font-weight: 700;">Percorso Guidato Vinted</span>
           </div>
 
           <!-- Wizard 5 Steps Indicator -->
-          <div class="wizard-progress">
+          <div class="wizard-progress" role="progressbar" aria-valuemin="1" aria-valuemax="5" aria-valuenow="1">
             <div id="wizard-step-ind-1" class="progress-step-indicator active">
               <div class="step-num-circle">1</div>
               <span>Moto</span>
@@ -298,11 +457,11 @@
 
           <!-- STEP 1 PANE: MOTO -->
           <div id="wizard-pane-1" class="wizard-step-pane active">
-            <h4 style="font-size: 14px; font-weight: 800;">1. A quale moto si monta?</h4>
+            <h3 style="font-size: 14px; font-weight: 800;">1. A quale moto si monta?</h3>
             <p style="font-size: 12px; color: var(--text-muted);">Seleziona la famiglia e la specifica generazione/fascia d'anni per garantire compatibilità immediata agli acquirenti.</p>
             
             <div class="select-group">
-              <label>Famiglia e Generazione</label>
+              <label for="post-select-family">Famiglia e Generazione</label>
               <select id="post-select-family" class="custom-select">
                 <!-- Injected via JS -->
               </select>
@@ -311,21 +470,21 @@
 
           <!-- STEP 2 PANE: CATEGORIA -->
           <div id="wizard-pane-2" class="wizard-step-pane">
-            <h4 style="font-size: 14px; font-weight: 800;">2. Che tipo di pezzo è?</h4>
+            <h3 style="font-size: 14px; font-weight: 800;">2. Che tipo di pezzo è?</h3>
             <p style="font-size: 12px; color: var(--text-muted);">Scegli la categoria tecnica esatta e l'eventuale sezione speciale.</p>
             
             <div class="select-group">
-              <label>Categoria Tecnica</label>
+              <label for="post-select-cat">Categoria Tecnica</label>
               <select id="post-select-cat" class="custom-select">
                 <!-- Injected via JS -->
               </select>
             </div>
 
             <div class="select-group">
-              <label>Sezione Speciale (Opzionale)</label>
+              <label for="post-select-special">Sezione Speciale (Opzionale)</label>
               <select id="post-select-special" class="custom-select" onchange="APP_STATE.wizard.specialSection=this.value">
                 <option value="none">Nessuna (Ricambio Standard)</option>
-                <option value="Old School">Old School (Oltre 40 anni / Flathead, Pan, Shovel)</option>
+                <option value="Old School">Old School (Oltre 40 anni / Flathead, Panhead, Shovelhead)</option>
                 <option value="Anniversari">Anniversari ed Edizioni Limitate (100th, 105th, 115th, CVO)</option>
               </select>
             </div>
@@ -333,34 +492,34 @@
 
           <!-- STEP 3 PANE: GUIDA FOTO OBBLIGATORIE -->
           <div id="wizard-pane-3" class="wizard-step-pane">
-            <h4 style="font-size: 14px; font-weight: 800;">3. Foto Obbligatorie (Regole Rigide)</h4>
+            <h3 style="font-size: 14px; font-weight: 800;">3. Foto Obbligatorie (Regole Rigide)</h3>
             <p style="font-size: 12px; color: var(--text-muted);">Minimo 4 scatti. Luce naturale, sfondo neutro, nessun riflesso su cromature.</p>
             
             <div class="photo-rules-grid">
               <div id="photo-slot-overall" class="photo-rule-box" onclick="simulatePhotoUpload('overall')">
-                <div class="icon">📷</div>
-                <h5>1. Vista d'insieme</h5>
+                <div class="icon" aria-hidden="true">📷</div>
+                <h4>1. Vista d'insieme</h4>
                 <span>Pezzo intero ben visibile</span>
               </div>
               <div id="photo-slot-sideA" class="photo-rule-box" onclick="simulatePhotoUpload('sideA')">
-                <div class="icon">🔄</div>
-                <h5>2. Lato A e Lato B</h5>
+                <div class="icon" aria-hidden="true">🔄</div>
+                <h4>2. Lato A e Lato B</h4>
                 <span>Entrambi i prospetti</span>
               </div>
               <div id="photo-slot-oemMark" class="photo-rule-box" onclick="simulatePhotoUpload('oemMark')">
-                <div class="icon">🔍</div>
-                <h5>3. Marcatura / Codice</h5>
-                <span>Primo piano numero pezzo</span>
+                <div class="icon" aria-hidden="true">🔍</div>
+                <h4>3. Marcatura / Codice</h4>
+                <span>Primo piano numero OEM</span>
               </div>
               <div id="photo-slot-defects" class="photo-rule-box" onclick="simulatePhotoUpload('defects')">
-                <div class="icon">🔎</div>
-                <h5>4. Dettaglio difetti</h5>
+                <div class="icon" aria-hidden="true">🔎</div>
+                <h4>4. Dettaglio difetti</h4>
                 <span>Eventuali graffi o usura</span>
               </div>
             </div>
 
             <div id="ai-photo-check-badge" class="ai-validation-badge" style="display: none;">
-              <span>🤖</span>
+              <span aria-hidden="true">🤖</span>
               <div>
                 <strong>Controllo Qualità AI Superato:</strong> Tutte le foto risultano nitide, con illuminazione corretta e marcatura leggibile.
               </div>
@@ -369,15 +528,15 @@
 
           <!-- STEP 4 PANE: DATI PEZZO -->
           <div id="wizard-pane-4" class="wizard-step-pane">
-            <h4 style="font-size: 14px; font-weight: 800;">4. Dati tecnici e prezzo</h4>
+            <h3 style="font-size: 14px; font-weight: 800;">4. Dati tecnici e prezzo</h3>
             
             <div class="select-group">
-              <label>Codice Ricambio OEM (obbligatorio se marcato)</label>
+              <label for="post-input-oem">Codice Ricambio OEM (obbligatorio se marcato)</label>
               <input id="post-input-oem" type="text" class="search-main-input" placeholder="Es. 25700941 o 64900552" style="padding: 8px 12px;">
             </div>
 
             <div class="select-group">
-              <label>Condizione del ricambio</label>
+              <label for="post-select-cond">Condizione del ricambio</label>
               <select id="post-select-cond" class="custom-select">
                 <option value="Nuovo (in confezione originale)">Nuovo (in confezione originale)</option>
                 <option value="Pari al nuovo (smontato subito)">Pari al nuovo (smontato subito)</option>
@@ -389,11 +548,11 @@
 
             <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 10px;">
               <div class="select-group">
-                <label>Prezzo richiesto (€)</label>
+                <label for="post-input-price">Prezzo richiesto (€)</label>
                 <input id="post-input-price" type="number" class="search-main-input" placeholder="Es. 95" style="padding: 8px 12px;">
               </div>
               <div class="select-group">
-                <label>Città (Ritiro a mano)</label>
+                <label for="post-input-city">Città (Ritiro a mano)</label>
                 <input id="post-input-city" type="text" class="search-main-input" placeholder="Es. Vicenza (VI)" value="Vicenza (VI)" style="padding: 8px 12px;">
               </div>
             </div>
@@ -401,7 +560,7 @@
 
           <!-- STEP 5 PANE: DESCRIZIONE ASSISTITA AI -->
           <div id="wizard-pane-5" class="wizard-step-pane">
-            <h4 style="font-size: 14px; font-weight: 800;">5. Descrizione Assistita dall'AI</h4>
+            <h3 style="font-size: 14px; font-weight: 800;">5. Descrizione Assistita dall'AI</h3>
             <p style="font-size: 12px; color: var(--text-muted);">L'intelligenza artificiale genera titolo standardizzato e scheda tecnica. Tu verifichi e confermi.</p>
 
             <div class="ai-generator-box">
@@ -411,12 +570,12 @@
             </div>
 
             <div class="select-group">
-              <label>Titolo Standardizzato</label>
+              <label for="post-title-ai">Titolo Standardizzato</label>
               <input id="post-title-ai" type="text" class="search-main-input" style="padding: 8px 12px; font-weight: 700;">
             </div>
 
             <div class="select-group">
-              <label>Descrizione Completa</label>
+              <label for="post-desc-ai">Descrizione Completa</label>
               <textarea id="post-desc-ai" rows="5" class="search-main-input" style="padding: 10px 12px; font-family: var(--font-body);"></textarea>
             </div>
           </div>
@@ -431,15 +590,15 @@
       </section>
 
       <!-- ================= SCREEN 5: GARAGE & PROFILO ================= -->
-      <section id="screen-garage" class="screen-view">
+      <section id="screen-garage" class="screen-view" aria-labelledby="garage-heading">
         <div class="garage-content">
 
           <div class="section-title">
-            <span>Il Mio Garage Personale</span>
+            <h2 id="garage-heading" style="font-size:inherit; margin:0;">Il Mio Garage Personale</h2>
             <span class="badge-tag oem-genuine">2 Moto Censite</span>
           </div>
           <p style="font-size: 12px; color: var(--text-muted); margin-top: -10px;">
-            Scegli quale moto stai usando per trovare all'istante i ricambi compatibili senza dover impostare filtri ogni volta.
+            Scegli quale moto stai usando per trovare all'istante i ricambi compatibili senza dover reimpostare i filtri ad ogni ricerca.
           </p>
 
           <!-- List of bikes in user's garage -->
@@ -449,65 +608,65 @@
 
           <!-- Add bike button -->
           <button class="chip-btn" style="padding: 10px; border-style: dashed; text-align: center;" onclick="alert('Funzione Aggiungi Moto: Permette di salvare una nuova moto nel tuo garage virtuale.')">
-            ➕ Aggiungi un'altra Harley al tuo garage
+            ➕ Aggiungi un'altra moto al tuo garage
           </button>
 
           <!-- Rules & Safety summary -->
-          <div style="background: #fff; padding: 14px; border-radius: 10px; border: 1px solid var(--border-vintage); margin-top: 10px;">
-            <h4 style="font-size: 13px; font-weight: 800; margin-bottom: 6px;">🛡️ Politica Anti-Contraffazione & DSA</h4>
+          <article style="background: #fff; padding: 14px; border-radius: 10px; border: 1px solid var(--border-vintage); margin-top: 10px;">
+            <h4 style="font-size: 13px; font-weight: 800; margin-bottom: 6px;">🛡️ Politica Anti-Contraffazione & DSA Europeo</h4>
             <ul style="font-size: 11.5px; color: #555; padding-left: 18px; line-height: 1.5;">
-              <li>È ammesso solo materiale autentico e originale.</li>
-              <li>Divieto categorico di imitazioni o repliche cinesi non marcate.</li>
-              <li>Pulsante di segnalazione attivo 24/7 con rimozione immediata.</li>
-              <li>Contrassegno "Venditore Verificato" per chi carica documento d'identità.</li>
+              <li>È ammesso solo materiale autentico e originale Harley-Davidson o marchi indipendenti certificati.</li>
+              <li>Divieto categorico di imitazioni o repliche cinesi prive di certificazione.</li>
+              <li>Pulsante di segnalazione attivo con rimozione immediata degli annunci contraffatti.</li>
+              <li>Contrassegno "Venditore Verificato" per chi fornisce documento d'identità valido.</li>
             </ul>
-          </div>
+          </article>
 
         </div>
       </section>
 
       <!-- Legal Disclaimer Footer -->
-      <footer class="app-legal-footer">
+      <footer class="app-legal-footer" role="contentinfo">
         <p><strong>Disclaimer di Marchio:</strong> Free Your Garage non è affiliata né autorizzata da Harley-Davidson Inc. I marchi, i nomi di modelli e le famiglie citati appartengono ai rispettivi titolari e sono utilizzati esclusivamente a scopo descrittivo di compatibilità tecnica dei ricambi.</p>
-        <p style="margin-top: 4px;">Piattaforma P2P sviluppata da Nicola Valigi (Houdinick) · Ottobre 2026</p>
+        <p style="margin-top: 4px;">Piattaforma P2P ideata e sviluppata da Nicola Valigi (Houdinick) · Ottobre 2026</p>
       </footer>
 
       <!-- Bottom Navigation Bar (5 Primary Views) -->
-      <nav class="bottom-nav">
-        <button class="nav-item active" data-screen="home">
-          <span class="nav-icon">🏠</span>
+      <nav class="bottom-nav" role="navigation" aria-label="Navigazione principale applicazione">
+        <button class="nav-item active" data-screen="home" aria-label="Vai alla Home">
+          <span class="nav-icon" aria-hidden="true">🏠</span>
           <span>Home</span>
         </button>
-        <button class="nav-item" data-screen="search">
-          <span class="nav-icon">🔍</span>
+        <button class="nav-item" data-screen="search" aria-label="Cerca ricambi">
+          <span class="nav-icon" aria-hidden="true">🔍</span>
           <span>Cerca</span>
         </button>
-        <button class="nav-item nav-post-cta" data-screen="post">
-          <span class="nav-icon">➕</span>
+        <button class="nav-item nav-post-cta" data-screen="post" aria-label="Pubblica un annuncio di ricambio">
+          <span class="nav-icon" aria-hidden="true">➕</span>
           <span>Pubblica</span>
         </button>
-        <button class="nav-item" data-screen="garage">
-          <span class="nav-icon">🏍️</span>
+        <button class="nav-item" data-screen="garage" aria-label="Accedi al tuo Garage">
+          <span class="nav-icon" aria-hidden="true">🏍️</span>
           <span>Garage</span>
         </button>
       </nav>
 
       <!-- Chat Modal Simulator -->
-      <div id="modal-chat" class="modal-overlay">
+      <div id="modal-chat" class="modal-overlay" role="dialog" aria-modal="true" aria-labelledby="chat-modal-title">
         <div class="modal-card">
           <div class="modal-header">
             <div>
               <strong id="chat-modal-title" style="font-size: 13px;">Chat con il venditore</strong>
               <div style="font-size: 10.5px; color: #666;">Scambio diretto / Consegna a mano</div>
             </div>
-            <button id="btn-close-chat-modal" class="btn-close-modal">✕</button>
+            <button id="btn-close-chat-modal" class="btn-close-modal" aria-label="Chiudi chat">✕</button>
           </div>
           <div class="modal-body">
-            <div id="chat-messages-body" class="chat-messages-container">
+            <div id="chat-messages-body" class="chat-messages-container" role="log" aria-live="polite">
               <!-- Injected via JS -->
             </div>
             <div class="chat-input-bar">
-              <input id="input-chat-message" type="text" placeholder="Scrivi un messaggio...">
+              <input id="input-chat-message" type="text" placeholder="Scrivi un messaggio..." aria-label="Messaggio per il venditore">
               <button id="btn-send-chat">Invia</button>
             </div>
           </div>

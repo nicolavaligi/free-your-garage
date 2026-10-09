@@ -1,0 +1,7 @@
+# Robots.txt for Free Your Garage (FYG)
+# Website: https://nicolavaligi.github.io/free-your-garage/
+
+User-agent: *
+Allow: /
+
+Sitemap: https://nicolavaligi.github.io/free-your-garage/sitemap.xml
