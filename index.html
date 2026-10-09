@@ -1,0 +1,522 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Free Your Garage — Swap American Bike Parts (Prototipo Ufficiale)</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <!-- Top Controller Bar for Prototype Review -->
+  <header class="top-controller-bar">
+    <div class="controller-left">
+      <strong>FREE YOUR GARAGE (FYG)</strong>
+      <span class="badge-status-pill">PROTOTIPO FASE 6 INTERATTIVO</span>
+      <span style="color:#888; font-size:12px;">Nicola Valigi · Proprietà Personale</span>
+    </div>
+    <div class="view-mode-toggle">
+      <button id="btn-mode-mobile" class="mode-btn active">📱 Vista Smartphone (3 Tocchi)</button>
+      <button id="btn-mode-desktop" class="mode-btn">💻 Vista Desktop / Vetrina</button>
+    </div>
+  </header>
+
+  <!-- Master Viewport wrapper -->
+  <main id="master-viewport" class="master-viewport mode-mobile">
+    <div class="app-container">
+
+      <!-- Global App Header -->
+      <div class="app-header">
+        <div class="header-top">
+          <div class="brand-badge" onclick="navigateTo('home')">
+            <div class="brand-icon-emblem">⚡</div>
+            <div class="brand-text">
+              <h1>Free Your Garage</h1>
+              <span>Swap American Bike Parts</span>
+            </div>
+          </div>
+          <div style="font-size: 11px; background: #ede4d6; padding: 4px 8px; border-radius: 6px; font-weight:700; color:#5d4037;">
+            #FYG 2026
+          </div>
+        </div>
+
+        <!-- Active Bike Selector Banner (Feature Killer) -->
+        <div id="my-garage-header-pill" class="my-garage-active-pill" title="Clicca per cambiare moto attiva nel tuo garage">
+          <div class="garage-pill-left">
+            <div class="bike-icon-circle">🏍️</div>
+            <div>
+              <div class="garage-pill-title">La mia moto attiva (Filtro 100%)</div>
+              <div id="header-bike-name" class="garage-pill-name">Softail Street Bob 107 (2018+)</div>
+            </div>
+          </div>
+          <div class="garage-pill-action">Cambia ▾</div>
+        </div>
+      </div>
+
+      <!-- ================= SCREEN 1: HOME ================= -->
+      <section id="screen-home" class="screen-view active">
+        <div class="home-content">
+
+          <!-- Value Proposition -->
+          <div class="value-prop-banner">
+            <h2>Non la gratuità, ma l'ordine</h2>
+            <p>Solo ricambi e accessori originali per moto americane. Trova in 3 tocchi solo i pezzi che montano esattamente sulla tua moto.</p>
+            <div class="pills-row">
+              <span class="value-prop-pill">✅ Zero truffe</span>
+              <span class="value-prop-pill">🔍 Codici OEM verificati</span>
+              <span class="value-prop-pill">📸 Ispezione 4 foto</span>
+            </div>
+          </div>
+
+          <!-- Old School Special Section Callout -->
+          <div class="vintage-callout" onclick="filterByOldSchool()">
+            <div class="vintage-callout-text">
+              <h3>🏛️ Sezione Speciale: Old School</h3>
+              <p>Oltre 40 anni: Flathead, Knucklehead, Panhead, Shovelhead</p>
+            </div>
+            <div class="vintage-callout-badge">Esplora ➔</div>
+          </div>
+
+          <!-- 10 Technical Categories Grid -->
+          <div>
+            <div class="section-title">
+              <span>Categorie Tecniche</span>
+              <span style="font-size:11px; color:var(--text-muted); font-family:var(--font-body);">10 sezioni</span>
+            </div>
+            <div id="categories-grid" class="categories-grid">
+              <!-- Dynamically populated via JS -->
+            </div>
+          </div>
+
+          <!-- Compatible Listings Feed for Current Bike -->
+          <div>
+            <div class="section-title">
+              <span>Ricambi Compatibili Subito</span>
+              <span id="home-compat-count" class="badge-tag compatible">Filtro Attivo</span>
+            </div>
+            <div id="home-compatible-feed" class="listings-grid">
+              <!-- Dynamically populated via JS -->
+            </div>
+          </div>
+
+        </div>
+      </section>
+
+      <!-- ================= SCREEN 2: RICERCA ================= -->
+      <section id="screen-search" class="screen-view">
+        <div class="search-content">
+          
+          <!-- Unified Omnibox (Word or OEM code) -->
+          <div class="search-input-wrapper">
+            <span class="search-icon-inside">🔍</span>
+            <input 
+              id="search-omnibox" 
+              type="text" 
+              class="search-main-input" 
+              placeholder="Cerca pezzo o codice OEM (es. 25700941)..."
+            >
+          </div>
+
+          <!-- Quick Filter Chips -->
+          <div class="filter-chips-row">
+            <button id="chip-filter-compat" class="chip-btn active">⚡ Solo per la mia moto</button>
+            <button id="chip-filter-oem" class="chip-btn">🏷️ Solo OEM Marcati</button>
+            <button class="chip-btn" onclick="resetSearchFilters()">🔄 Reimposta</button>
+          </div>
+
+          <!-- Dropdowns Cascading Filters -->
+          <div class="filter-controls-card">
+            <div class="select-group">
+              <label>Famiglia e Anno</label>
+              <select id="search-select-family" class="custom-select">
+                <!-- Populated via JS -->
+              </select>
+            </div>
+            <div class="select-group">
+              <label>Categoria Tecnica</label>
+              <select id="search-select-cat" class="custom-select">
+                <!-- Populated via JS -->
+              </select>
+            </div>
+          </div>
+
+          <!-- Search Results Header -->
+          <div class="section-title" style="margin-top: 6px;">
+            <span id="search-results-count">Risultati di ricerca</span>
+          </div>
+
+          <!-- Results List -->
+          <div id="search-results-list" class="listings-grid">
+            <!-- Populated via JS -->
+          </div>
+
+        </div>
+      </section>
+
+      <!-- ================= SCREEN 3: DETTAGLIO ANNUNCIO ================= -->
+      <section id="screen-detail" class="screen-view">
+        <div class="detail-content">
+
+          <!-- Top Back Bar -->
+          <div class="detail-back-bar">
+            <button id="btn-back-detail" class="btn-back">← Torna al catalogo</button>
+            <span class="badge-tag oem-genuine">Originale Verificato</span>
+          </div>
+
+          <!-- 4 Photo Inspection Gallery (Phase 5 Rule) -->
+          <div class="photo-inspection-grid">
+            <div id="slot-photo-main" class="inspection-slot main">
+              <span class="slot-tag">1. Vista d'insieme</span>
+            </div>
+            <div id="slot-photo-sideA" class="inspection-slot">
+              <span class="slot-tag">2. Lato A / B</span>
+            </div>
+            <div id="slot-photo-oem" class="inspection-slot">
+              <span class="slot-tag">3. Marcatura OEM</span>
+            </div>
+            <div id="slot-photo-defects" class="inspection-slot" style="display:none;">
+              <span class="slot-tag">4. Difetti / Usura</span>
+            </div>
+          </div>
+
+          <div class="detail-body-container">
+
+            <!-- Title & Price -->
+            <div>
+              <div id="detail-title" style="font-size: 16px; font-weight: 800; line-height: 1.3; color: var(--oil-dark); margin-bottom: 6px;">
+                Coperchio Frizione Derby Cover – Softail 2018+ – cod. 25700941
+              </div>
+              <div id="detail-price" style="font-family: var(--font-heading); font-size: 26px; color: var(--rust-orange);">
+                95 €
+              </div>
+            </div>
+
+            <!-- Compatibility Status Banner -->
+            <div id="detail-compat-box" class="compatibility-box match">
+              <!-- Injected via JS -->
+            </div>
+
+            <!-- Technical Specifications Table -->
+            <div class="detail-specs-table">
+              <div class="spec-row">
+                <span class="spec-label">Famiglia compatibile</span>
+                <span id="spec-family" class="spec-value">Softail (dal 2018)</span>
+              </div>
+              <div class="spec-row">
+                <span class="spec-label">Categoria</span>
+                <span id="spec-category" class="spec-value">Motore e trasmissione</span>
+              </div>
+              <div class="spec-row">
+                <span class="spec-label">Codice Ricambio OEM</span>
+                <span id="spec-oem" class="spec-value">25700941</span>
+              </div>
+              <div class="spec-row">
+                <span class="spec-label">Stato di conservazione</span>
+                <span id="spec-condition" class="spec-value">Pari al nuovo</span>
+              </div>
+              <div class="spec-row">
+                <span class="spec-label">Luogo per ritiro a mano</span>
+                <span id="spec-location" class="spec-value">Verona (VR)</span>
+              </div>
+            </div>
+
+            <!-- Description -->
+            <div>
+              <h4 style="font-size: 13px; text-transform: uppercase; margin-bottom: 6px; color: var(--text-muted); font-weight: 700;">Descrizione del venditore</h4>
+              <p id="detail-description" style="font-size: 12.5px; line-height: 1.5; color: #333; background: #fff; padding: 12px; border-radius: 8px; border: 1px solid var(--border-vintage); white-space: pre-line;">
+                Descrizione...
+              </p>
+            </div>
+
+            <!-- Seller Card -->
+            <div class="seller-profile-card">
+              <div class="seller-avatar-block">
+                <div class="seller-avatar">MB</div>
+                <div>
+                  <div id="detail-seller-name" style="font-size: 13.5px; font-weight: 700;">Marco B.</div>
+                  <div id="detail-seller-badge" style="font-size: 11px; color: var(--forest-sage); font-weight: 600;">Fondatore #014</div>
+                </div>
+              </div>
+              <div id="detail-seller-rating" style="font-size: 12px; font-weight: 600; color: #555;">
+                ⭐ 5.0 (28 vendite)
+              </div>
+            </div>
+
+            <!-- Action buttons -->
+            <div class="cta-action-bar">
+              <button id="btn-contact-seller" class="btn-contact">
+                💬 Contatta il venditore (Chat)
+              </button>
+            </div>
+
+            <div style="text-align: center; margin-top: 4px;">
+              <button style="background: none; border: none; font-size: 11px; color: #999; text-decoration: underline; cursor: pointer;">
+                🚩 Segnala questo annuncio (Controllo Originalità)
+              </button>
+            </div>
+
+          </div>
+
+        </div>
+      </section>
+
+      <!-- ================= SCREEN 4: PUBBLICA (WIZARD 5 PASSAGGI) ================= -->
+      <section id="screen-post" class="screen-view">
+        <div class="post-wizard-content">
+
+          <div class="section-title">
+            <span>Pubblica Ricambio</span>
+            <span style="font-size: 11px; color: var(--rust-orange); font-weight: 700;">Modello Vinted</span>
+          </div>
+
+          <!-- Wizard 5 Steps Indicator -->
+          <div class="wizard-progress">
+            <div id="wizard-step-ind-1" class="progress-step-indicator active">
+              <div class="step-num-circle">1</div>
+              <span>Moto</span>
+            </div>
+            <div id="wizard-step-ind-2" class="progress-step-indicator">
+              <div class="step-num-circle">2</div>
+              <span>Categoria</span>
+            </div>
+            <div id="wizard-step-ind-3" class="progress-step-indicator">
+              <div class="step-num-circle">3</div>
+              <span>Foto</span>
+            </div>
+            <div id="wizard-step-ind-4" class="progress-step-indicator">
+              <div class="step-num-circle">4</div>
+              <span>Dati</span>
+            </div>
+            <div id="wizard-step-ind-5" class="progress-step-indicator">
+              <div class="step-num-circle">5</div>
+              <span>AI Review</span>
+            </div>
+          </div>
+
+          <!-- STEP 1 PANE: MOTO -->
+          <div id="wizard-pane-1" class="wizard-step-pane active">
+            <h4 style="font-size: 14px; font-weight: 800;">1. A quale moto si monta?</h4>
+            <p style="font-size: 12px; color: var(--text-muted);">Seleziona la famiglia e la specifica generazione/fascia d'anni per garantire compatibilità immediata agli acquirenti.</p>
+            
+            <div class="select-group">
+              <label>Famiglia e Generazione</label>
+              <select id="post-select-family" class="custom-select">
+                <!-- Injected via JS -->
+              </select>
+            </div>
+          </div>
+
+          <!-- STEP 2 PANE: CATEGORIA -->
+          <div id="wizard-pane-2" class="wizard-step-pane">
+            <h4 style="font-size: 14px; font-weight: 800;">2. Che tipo di pezzo è?</h4>
+            <p style="font-size: 12px; color: var(--text-muted);">Scegli la categoria tecnica esatta e l'eventuale sezione speciale.</p>
+            
+            <div class="select-group">
+              <label>Categoria Tecnica</label>
+              <select id="post-select-cat" class="custom-select">
+                <!-- Injected via JS -->
+              </select>
+            </div>
+
+            <div class="select-group">
+              <label>Sezione Speciale (Opzionale)</label>
+              <select id="post-select-special" class="custom-select" onchange="APP_STATE.wizard.specialSection=this.value">
+                <option value="none">Nessuna (Ricambio Standard)</option>
+                <option value="Old School">Old School (Oltre 40 anni / Flathead, Pan, Shovel)</option>
+                <option value="Anniversari">Anniversari ed Edizioni Limitate (100th, 105th, 115th, CVO)</option>
+              </select>
+            </div>
+          </div>
+
+          <!-- STEP 3 PANE: GUIDA FOTO OBBLIGATORIE -->
+          <div id="wizard-pane-3" class="wizard-step-pane">
+            <h4 style="font-size: 14px; font-weight: 800;">3. Foto Obbligatorie (Regole Rigide)</h4>
+            <p style="font-size: 12px; color: var(--text-muted);">Minimo 4 scatti. Luce naturale, sfondo neutro, nessun riflesso su cromature.</p>
+            
+            <div class="photo-rules-grid">
+              <div id="photo-slot-overall" class="photo-rule-box" onclick="simulatePhotoUpload('overall')">
+                <div class="icon">📷</div>
+                <h5>1. Vista d'insieme</h5>
+                <span>Pezzo intero ben visibile</span>
+              </div>
+              <div id="photo-slot-sideA" class="photo-rule-box" onclick="simulatePhotoUpload('sideA')">
+                <div class="icon">🔄</div>
+                <h5>2. Lato A e Lato B</h5>
+                <span>Entrambi i prospetti</span>
+              </div>
+              <div id="photo-slot-oemMark" class="photo-rule-box" onclick="simulatePhotoUpload('oemMark')">
+                <div class="icon">🔍</div>
+                <h5>3. Marcatura / Codice</h5>
+                <span>Primo piano numero pezzo</span>
+              </div>
+              <div id="photo-slot-defects" class="photo-rule-box" onclick="simulatePhotoUpload('defects')">
+                <div class="icon">🔎</div>
+                <h5>4. Dettaglio difetti</h5>
+                <span>Eventuali graffi o usura</span>
+              </div>
+            </div>
+
+            <div id="ai-photo-check-badge" class="ai-validation-badge" style="display: none;">
+              <span>🤖</span>
+              <div>
+                <strong>Controllo Qualità AI Superato:</strong> Tutte le foto risultano nitide, con illuminazione corretta e marcatura leggibile.
+              </div>
+            </div>
+          </div>
+
+          <!-- STEP 4 PANE: DATI PEZZO -->
+          <div id="wizard-pane-4" class="wizard-step-pane">
+            <h4 style="font-size: 14px; font-weight: 800;">4. Dati tecnici e prezzo</h4>
+            
+            <div class="select-group">
+              <label>Codice Ricambio OEM (obbligatorio se marcato)</label>
+              <input id="post-input-oem" type="text" class="search-main-input" placeholder="Es. 25700941 o 64900552" style="padding: 8px 12px;">
+            </div>
+
+            <div class="select-group">
+              <label>Condizione del ricambio</label>
+              <select id="post-select-cond" class="custom-select">
+                <option value="Nuovo (in confezione originale)">Nuovo (in confezione originale)</option>
+                <option value="Pari al nuovo (smontato subito)">Pari al nuovo (smontato subito)</option>
+                <option value="Ottimo stato usato">Ottimo stato usato</option>
+                <option value="Buono stato con normali segni d'uso">Buono stato con normali segni d'uso</option>
+                <option value="Da restaurare / Da lucidare">Da restaurare / Da lucidare</option>
+              </select>
+            </div>
+
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 10px;">
+              <div class="select-group">
+                <label>Prezzo richiesto (€)</label>
+                <input id="post-input-price" type="number" class="search-main-input" placeholder="Es. 95" style="padding: 8px 12px;">
+              </div>
+              <div class="select-group">
+                <label>Città (Ritiro a mano)</label>
+                <input id="post-input-city" type="text" class="search-main-input" placeholder="Es. Vicenza (VI)" value="Vicenza (VI)" style="padding: 8px 12px;">
+              </div>
+            </div>
+          </div>
+
+          <!-- STEP 5 PANE: DESCRIZIONE ASSISTITA AI -->
+          <div id="wizard-pane-5" class="wizard-step-pane">
+            <h4 style="font-size: 14px; font-weight: 800;">5. Descrizione Assistita dall'AI</h4>
+            <p style="font-size: 12px; color: var(--text-muted);">L'intelligenza artificiale genera titolo standardizzato e scheda tecnica. Tu verifichi e confermi.</p>
+
+            <div class="ai-generator-box">
+              <button class="btn-ai-magic" onclick="generateAiListingMetadata()">
+                ✨ Rigenera Titolo e Descrizione con AI
+              </button>
+            </div>
+
+            <div class="select-group">
+              <label>Titolo Standardizzato</label>
+              <input id="post-title-ai" type="text" class="search-main-input" style="padding: 8px 12px; font-weight: 700;">
+            </div>
+
+            <div class="select-group">
+              <label>Descrizione Completa</label>
+              <textarea id="post-desc-ai" rows="5" class="search-main-input" style="padding: 10px 12px; font-family: var(--font-body);"></textarea>
+            </div>
+          </div>
+
+          <!-- Wizard Actions Navigation -->
+          <div class="wizard-nav-actions">
+            <button id="btn-wizard-prev" class="btn-wizard-nav prev">← Indietro</button>
+            <button id="btn-wizard-next" class="btn-wizard-nav next">Continua ➔</button>
+          </div>
+
+        </div>
+      </section>
+
+      <!-- ================= SCREEN 5: GARAGE & PROFILO ================= -->
+      <section id="screen-garage" class="screen-view">
+        <div class="garage-content">
+
+          <div class="section-title">
+            <span>Il Mio Garage Personale</span>
+            <span class="badge-tag oem-genuine">2 Moto Censite</span>
+          </div>
+          <p style="font-size: 12px; color: var(--text-muted); margin-top: -10px;">
+            Scegli quale moto stai usando per trovare all'istante i ricambi compatibili senza dover impostare filtri ogni volta.
+          </p>
+
+          <!-- List of bikes in user's garage -->
+          <div id="garage-bikes-list" class="garage-bikes-list">
+            <!-- Injected via JS -->
+          </div>
+
+          <!-- Add bike button -->
+          <button class="chip-btn" style="padding: 10px; border-style: dashed; text-align: center;" onclick="alert('Funzione Aggiungi Moto: Permette di salvare una nuova moto nel tuo garage virtuale.')">
+            ➕ Aggiungi un'altra Harley al tuo garage
+          </button>
+
+          <!-- Rules & Safety summary -->
+          <div style="background: #fff; padding: 14px; border-radius: 10px; border: 1px solid var(--border-vintage); margin-top: 10px;">
+            <h4 style="font-size: 13px; font-weight: 800; margin-bottom: 6px;">🛡️ Politica Anti-Contraffazione & DSA</h4>
+            <ul style="font-size: 11.5px; color: #555; padding-left: 18px; line-height: 1.5;">
+              <li>È ammesso solo materiale autentico e originale.</li>
+              <li>Divieto categorico di imitazioni o repliche cinesi non marcate.</li>
+              <li>Pulsante di segnalazione attivo 24/7 con rimozione immediata.</li>
+              <li>Contrassegno "Venditore Verificato" per chi carica documento d'identità.</li>
+            </ul>
+          </div>
+
+        </div>
+      </section>
+
+      <!-- Legal Disclaimer Footer -->
+      <footer class="app-legal-footer">
+        <p><strong>Disclaimer di Marchio:</strong> Free Your Garage non è affiliata né autorizzata da Harley-Davidson Inc. I marchi, i nomi di modelli e le famiglie citati appartengono ai rispettivi titolari e sono utilizzati esclusivamente a scopo descrittivo di compatibilità tecnica dei ricambi.</p>
+        <p style="margin-top: 4px;">Piattaforma P2P sviluppata da Nicola Valigi (Houdinick) · Ottobre 2026</p>
+      </footer>
+
+      <!-- Bottom Navigation Bar (5 Primary Views) -->
+      <nav class="bottom-nav">
+        <button class="nav-item active" data-screen="home">
+          <span class="nav-icon">🏠</span>
+          <span>Home</span>
+        </button>
+        <button class="nav-item" data-screen="search">
+          <span class="nav-icon">🔍</span>
+          <span>Cerca</span>
+        </button>
+        <button class="nav-item nav-post-cta" data-screen="post">
+          <span class="nav-icon">➕</span>
+          <span>Pubblica</span>
+        </button>
+        <button class="nav-item" data-screen="garage">
+          <span class="nav-icon">🏍️</span>
+          <span>Garage</span>
+        </button>
+      </nav>
+
+      <!-- Chat Modal Simulator -->
+      <div id="modal-chat" class="modal-overlay">
+        <div class="modal-card">
+          <div class="modal-header">
+            <div>
+              <strong id="chat-modal-title" style="font-size: 13px;">Chat con il venditore</strong>
+              <div style="font-size: 10.5px; color: #666;">Scambio diretto / Consegna a mano</div>
+            </div>
+            <button id="btn-close-chat-modal" class="btn-close-modal">✕</button>
+          </div>
+          <div class="modal-body">
+            <div id="chat-messages-body" class="chat-messages-container">
+              <!-- Injected via JS -->
+            </div>
+            <div class="chat-input-bar">
+              <input id="input-chat-message" type="text" placeholder="Scrivi un messaggio...">
+              <button id="btn-send-chat">Invia</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>
